@@ -17,7 +17,7 @@ module Webpacker
 
     def raise_if_gem_and_node_package_versions_differ
       # Skip check if package is not in package.json or listed from relative path, git repo or github URL
-      return if node_package_version.skip_processing?
+      return if true #node_package_version.skip_processing?
 
       node_major_minor_patch = node_package_version.major_minor_patch
       gem_major_minor_patch = gem_major_minor_patch_version
